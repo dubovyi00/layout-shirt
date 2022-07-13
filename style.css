@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "Circe Bold";
+    src: url("fonts/circe/circe_700.ttf") format("truetype");
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Circe Semibold";
+    src: url("fonts/circe/circe_600.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circe";
+    src: url("fonts/circe/circe_300.ttf") format("truetype");
+    font-style: normal;
+}
+
+div.content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 24px;
+    margin-left: 25px;
+}
+
+div.images {
+
+    width: 491px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    
+}
+
+div.images_col {
+    
+    display: flex;
+    flex-direction: column;
+    width: 88px;
+
+
+}
+
+img.images_col-one {
+    margin-bottom: 30px;
+}
+
+div.images_current {
+    margin-left: 32px;
+    height: 491px;
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+div.descr {
+    display: block;
+
+    width: 445px;
+    padding-left: 31px;
+    padding-right: 31px;
+}
+
+h1 {
+    margin-top: 55px;
+    text-transform: uppercase;
+    font-family: "Circe Bold";
+}
+
+a {
+    text-decoration: none;
+    font-family: "Circe";
+}
+
+div.descr_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.descr_price {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    font-family: "Circe";
+}
+
+span.descr_old-price {
+    text-decoration: line-through;
+    font-family: "Circe";
+    color: #c8c7c7;
+}
+
+span.descr_current-price {
+    margin-left: 12px;
+    font-family: "Circe Semibold";
+    color: #a1a1a1;
+}
+
+b {
+    font-family: "Circe Semibold";
+}
+
+span.descr_discount-price {
+    margin-left: 36px;
+}
+
+div.descr_transfer{
+    background-color: #f4f4f4;
+    font-family: "Circe";
+}
+
+div.descr_buttons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+button.descr_btn {
+    background-color: white;
+    color: black;
+    font-family: "Circe Semibold";
+    width: 165px;
+    height: 40px;
+    margin-right: 23px;
+    text-transform: uppercase;
+    border-radius: 0px;
+    border: none;
+
+}
+
+button.blue {
+    background-color: #006be5;
+    color: white;
+}
+
+div.descr_about {
+    margin-top: 45px;
+    font-family: "Circe";
+}
+
+div.descr_share{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: "Circe";
+}
+
+img.descr_share-icon {
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+}
