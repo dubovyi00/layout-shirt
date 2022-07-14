@@ -3,6 +3,45 @@
     <head>
         <title>Макет</title>
 	    <link rel="stylesheet" href="style.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="jBox-master/dist/jBox.all.css" rel="stylesheet">
+        <script src="jBox-master/dist/jBox.all.js"></script>
+        <script type="text/javascript">
+            var count = 0;
+            $(document).ready(function(){
+                $("button.left") .prop('disabled', true);
+                $("span.descr_to-buy-count").html(count);
+                $("button.left").click(function(){
+                    count -= 1;
+                    if (count === 0) {
+                        $("button.left") .prop('disabled', true);
+                    }
+                    
+                    $("span.descr_to-buy-count").html(count);
+                });
+                $("button.right").click(function(){
+                    
+                    count += 1;
+                    $("button.left") .prop('disabled', false);
+                    $("span.descr_to-buy-count").html(count);
+                });
+                $("button.blue").click(function () {
+                    if (count > 0) {
+                        if (count % 10 === 1 && count % 100 !== 11) {
+                            var variable_part = ' товар';
+                        } else if ((count % 10 >= 2 && count % 10 <= 4) && count % 100 > 14) {
+                            var variable_part = ' товара';
+                        } else {
+                            var variable_part = ' товаров';
+                        }
+                        new jBox('Notice', {
+                            content: 'В корзину добавлено ' + count + variable_part
+                        });
+                    }  
+               })
+            });
+        </script>
+
     </head>
     <body>
         <div class="content">
@@ -36,8 +75,15 @@
                     <p><img src="images/tick.png"> В наличии в магазине <a href="http://lamoda.ru">Lamoda</a></p>
                     <p><img src="images/truck.png"> Бесплатная доставка</p>
                 </div>
+
+                <div class="descr_to-buy">
+                    <button class="descr_to-buy-btn left">-</button>
+                    <span class="descr_to-buy-count"><!-- Количество --></span>
+                    <button class="descr_to-buy-btn right">+</button>
+                </div>
+
                 <div class="descr_buttons">
-                    <button class="descr_btn blue">В магазин</button>
+                    <button class="descr_btn blue">Купить</button>
                     <button class="descr_btn">В избранное</button>
                 </div>
                 

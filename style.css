@@ -157,10 +157,51 @@ div.descr_transfer{
     padding-bottom: 1px;
 }
 
-div.descr_buttons {
-    margin-top: 50px;
+div.descr_to-buy {
     display: flex;
     flex-direction: row;
+    margin-top: 15px;
+
+}
+
+button.descr_to-buy-btn {
+    height: 30px;
+    width: 30px;
+    border: 1px solid #a1a1a1;
+    line-height: 30px;
+    background-color: white;
+    font-family: "Circe";
+    font-size: 28px;
+}
+
+button.descr_to-buy-btn:hover {
+    background-color: #f4f4f4;
+}
+
+button.left {
+    border-radius: 3px 0 0 3px;
+}
+
+button.right {
+    border-radius:  0 3px 3px 0 ;
+}
+
+span.descr_to-buy-count {
+    height: 28px;
+    width: 50px;
+    border: 1px solid #a1a1a1;
+    background-color: #f4f4f4;
+    font-family: "Circe";
+    font-size: 18px;
+    text-align: center;
+    line-height: 30px;
+} 
+
+div.descr_buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    
 }
 
 button.descr_btn {
